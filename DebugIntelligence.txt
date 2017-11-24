@@ -1,0 +1,67 @@
+implement BugAssistant:
+Rename to DebugInteligence
+
+
+Framework:
+1. parsing xml file to get the test case running process tokens until the failed point.
+2. every token is correspond to some process, or using a finite state machine class to represent the corresponding function.
+3. use switch case to detailize the many braching cases scenarios.
+4. could use git tag to search the key issues.(need to )
+
+
+5. Open a panel for user to input the product's components, which should include:          <----could use a class to represent a component?
+	1). Component's name
+	2). Component's log or logs that are related to the component's work flow
+	3). 
+6. Better implement a data flow map. Find a way. Such as: data "policy file" from client's "C:\policy" to site's sql table, interclude with  many temp folders.
+7. Should make a database for each case and represent each case with a sequence(maybe) of component's class/object. When analyse the result xml file, we then have a connection for test case and failed point/token. Which will make a bug fix work flow happend!!!!!!
+
+
+8. Should implement a default mode and a mannual mode. mannual mode is basically a detailed case step, default mode is auto work flow until the bug is found.
+
+9. Should produce two out put at least: First, if we are to sure about the real cause of the bug, than out put it here. Second, if we are not sure about that, than we should have a couple of guess or give some hint to the user.
+
+
+
+How to think:
+
+1. raw data: Need to extract the xml result file to store these info:
+	1). The session config 
+	2). The tree hierarchical structure of the xml, with truncted core info, i.e., throw away the log info, only retain the basic structure.
+	3).
+2. We can use the 'Event' mechanism to automatically make the work flow move, such as if token 'veryfyProcessSatus' fail then triger some event.
+
+
+
+
+
+Question in mind:
+
+1. Should we also implement the token class?
+
+
+
+
+
+
+
+
+DataDataData!!!
+
+1. "TestSuite"--Test result data.
+2. ConfigStore--session configuration data. Which contains:
+	1). GlobalSettings
+	2). ConfigSettings(which are several parameters)
+	3). Systems(session machines and their roles)
+	4). Smartphones(Ignore for now)
+	5). OSXMachines(Ignore for now)
+	6). ModernDevices(Ignore for now)
+	7). CentralSites(Site topology and so on)
+	8). Domains(Domain topology and so on)
+	9). Servers(all kinds of windows network operating system server role)
+
+
+3. test steps data
+4. product component data
+
+
